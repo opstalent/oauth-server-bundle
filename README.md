@@ -8,7 +8,7 @@ custom_auth.storage:
         class: AppBundle\Auth\CustomOAuth2
         arguments: ['@custom_auth.storage', '%fos_oauth_server.server.options%']
     fos_oauth_server.controller.token:
-        class: OAuthServerBundle\Controller\TokenController
+        class: Opstalent\OAuthServerBundle\Controller\TokenController
         arguments: ['@custom_auth.server']
 
 ````
