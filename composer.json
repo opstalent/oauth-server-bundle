@@ -26,6 +26,10 @@
     "MIT"
   ],
   "require" : {
+    "friendsofsymfony/oauth-server-bundle": "^1.5",
+    "friendsofsymfony/oauth2-php": "^1.2",
+    "symfony/security": "^3.2",
+    "symfony/http-foundation": "^3.2"
   },
   "require-dev" : {
   },
