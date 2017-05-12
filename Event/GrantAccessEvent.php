@@ -19,12 +19,18 @@ class GrantAccessEvent extends Event
     protected $request;
 
     /**
+     * @var Response
+     */
+    protected $response;
+
+    /**
      * @param Request $request
      * @param FormInterface $form
      */
-    public function __construct(Request $request)
+    public function __construct(Request $request, $response)
     {
         $this->request = $request;
+        $this->response = $response;
     }
 
     /**
@@ -35,6 +41,12 @@ class GrantAccessEvent extends Event
         return $this->request;
     }
 
-
+    /**
+     * @return Response
+     */
+    public function getResponse() : Response
+    {
+        return $this->response;
+    }
 }
 
