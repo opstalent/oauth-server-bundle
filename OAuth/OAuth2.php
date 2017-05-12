@@ -33,9 +33,8 @@ class OAuth2 extends BaseOAuth
     public function grantAccessToken(Request $request = null)
     {
         try {
-            $response = parent::grantAccessToken($request);
-            $this->dispatcher->dispatch(GrantAccessEvents::POST_ACCESS_TOKEN_GRANTED, new GrantAccessEvent($request,$response));
-            return $response;
+            $this->dispatcher->dispatch(GrantAccessEvents::POST_ACCESS_TOKEN_GRANTED, new GrantAccessEvent($request));
+            return parent::grantAccessToken($request);
         } catch (OAuth2ServerException $e) {
             throw new \Exception($e->getDescription(), 400, $e);
         }
