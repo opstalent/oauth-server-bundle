@@ -1,5 +1,5 @@
 {
-  "name" : "opstalent/oauthserverbundle",
+  "name" : "ops-talent/oauthserverbundle",
   "description" : "oauthserver modification",
   "type" : "symfony-bundle",
   "authors" : [
